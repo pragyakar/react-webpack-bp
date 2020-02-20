@@ -1,0 +1,18 @@
+# build
+dist/
+
+# node_modules
+node_modules/
+
+# yarn
+yarn-error.log
+
+# vscode history
+.history
+.vscode
+
+# .env Files
+.env.*
+
+# other files
+.DS_Store
