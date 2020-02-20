@@ -1,0 +1,21 @@
+{
+  "name": "otg-web",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "repository": "https://github.com/Fusemachines/otg-web.git",
+  "author": "pragyakarfuse <pragyakar@fusemachines.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.9.21",
+    "@types/react-dom": "^16.9.5",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
