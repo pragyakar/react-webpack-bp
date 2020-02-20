@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const App = () => {
+const App =() => {
   return (
     <p>OTG Web</p>
   );
