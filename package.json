@@ -6,7 +6,14 @@
   "author": "pragyakarfuse <pragyakar@fusemachines.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --watch --open"
+    "start": "webpack-dev-server --watch --open",
+    "build": "webpack -p",
+    "format": "prettier --write \"src/**/*.{ts, tsx, js}\"",
+    "clean": "rimraf dist",
+    "build:prod": "webpack -p --env.environment=production",
+    "build:uat": "webpack -p --env.environment=uat",
+    "create:prod": "run-s clean build:prod",
+    "create:uat": "run-s clean build:uat"
   },
   "devDependencies": {
     "@types/react": "^16.9.21",
@@ -17,6 +24,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.13.1",
+    "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",

@@ -1,9 +1,8 @@
 const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const dotEnv = require("../env/dot-env");
 const CompressionPlugin = require("compression-webpack-plugin");
+const dotEnv = require("../env/dot-env");
 
 module.exports = function generateWebpackPlugins(environment, target) {
   const plugins = [
