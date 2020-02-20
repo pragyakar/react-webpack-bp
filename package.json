@@ -15,6 +15,17 @@
     "create:prod": "run-s clean build:prod",
     "create:uat": "run-s clean build:uat"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "prettier --write \"src/**/*.{ts,tsx,js}\"",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "@types/react": "^16.9.21",
     "@types/react-dom": "^16.9.5",
@@ -24,6 +35,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
     "source-map-loader": "^0.2.4",
