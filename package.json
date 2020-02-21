@@ -20,7 +20,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
-      "prettier --write \"src/**/*.{ts,tsx,js}\"",
+      "prettier --trailing-commas es5 --single-quote --write",
       "git add"
     ]
   },
