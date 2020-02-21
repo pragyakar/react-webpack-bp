@@ -8,12 +8,10 @@
   "scripts": {
     "start": "webpack-dev-server --watch --open",
     "build": "webpack -p",
+    "create:production": "NODE_ENV=production PORT=9001 webpack -p",
+    "build:production": "run-s clean create:production",
     "format": "prettier --write \"src/**/*.{ts, tsx, js}\"",
-    "clean": "rimraf dist",
-    "build:prod": "webpack -p --env.environment=production",
-    "build:uat": "webpack -p --env.environment=uat",
-    "create:prod": "run-s clean build:prod",
-    "create:uat": "run-s clean build:uat"
+    "clean": "rimraf dist"
   },
   "husky": {
     "hooks": {
