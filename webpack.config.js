@@ -30,7 +30,7 @@ module.exports = () => {
       publicPath: PUBLIC_PATH,
       port: port,
       historyApiFallback: true,
-      host: '0.0.0.0'
+      host: 'localhost'
     },
     module: getModules(),
     resolve: getResolve(),
