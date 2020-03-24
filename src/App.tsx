@@ -1,13 +1,15 @@
 import * as React from 'react';
-import Login from './components/Login';
-import Router from './Router';
+import { Provider } from 'react-redux';
 
-const App = () => {
+import store from 'src/store';
+import Router from 'src/Router';
+
+const App: React.FC<{}> = () => {
   return (
     <>
-      <p>React Webpack BP</p>
-      <Login />
-      <Router />
+      <Provider store={store}>
+        <Router />
+      </Provider>
     </>
   );
 };
