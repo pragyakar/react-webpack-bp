@@ -2,7 +2,7 @@
   "name": "react-webpack-bp",
   "version": "1.0.0",
   "main": "main.tsx",
-  "repository": "https://github.com/Fusemachines/otg-web.git",
+  "repository": "https://github.com/pragyakarfuse/react-webpack-bp.git",
   "author": "pragyakarfuse <pragyakar@fusemachines.com>",
   "license": "MIT",
   "scripts": {
