@@ -5,12 +5,25 @@ interface IStorage {
   clear(): void;
 }
 
-const storage = localStorage;
-
-export function getItem(key: string) {
-  return storage.getItem(key);
+class StorageUtility implements IStorage {
+  private storage: Storage;
+  constructor() {
+    this.storage = window.localStorage;
+  }
+  getItem(key: string) {
+    return this.storage.getItem(key);
+  }
+  setItem(key: string, item: string) {
+    this.storage.setItem(key, item);
+  }
+  removeItem(key: string) {
+    this.storage.removeItem(key);
+  }
+  clear() {
+    this.storage.clear();
+  }
 }
 
-export function setItem(key: string, value: string) {
-  storage.setItem(key, value);
-}
+const storageUtilityInstance = new StorageUtility();
+
+export default storageUtilityInstance;
