@@ -11,4 +11,6 @@ interface IEnvConfig {
   REDIRECT_URI: string;
   RESPONSE_TYPE: string;
   SCOPE: string;
+  BASE_URL: string;
+  TIMEOUT: string;
 }
