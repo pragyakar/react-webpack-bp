@@ -1,13 +1,19 @@
-const dotEnv = require("dotenv");
+const dotEnv = require('dotenv');
 
 function getEnvConfig(environment) {
   dotEnv.config({ path: `./.env.${environment}` });
 
-  if (
-    process.env.TEST
-  ) {
+  if (process.env.TEST) {
     return {
-      TEST: process.env.TEST
+      TEST: process.env.TEST,
+      DOMAIN: process.env.DOMAIN || '',
+      AUDIENCE: process.env.AUDIENCE,
+      CLIENT_ID: process.env.CLIENT_ID,
+      REDIRECT_URI: process.env.REDIRECT_URI,
+      RESPONSE_TYPE: process.env.RESPONSE_TYPE,
+      SCOPE: process.env.SCOPE,
+      BASE_URL: process.env.BABEL_ENV,
+      TIMEOUT: process.env.TIMEOUT
     };
   } else {
     let errorMessage = `Cannot find .env.${environment} file or environment values are missing`;
