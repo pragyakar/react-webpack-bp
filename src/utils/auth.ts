@@ -1,11 +1,11 @@
 import auth0 from 'auth0-js';
-import { Config } from 'src/config';
+import { config } from 'src/config';
 
 class Auth {
   private auth0: auth0.WebAuth;
 
   constructor() {
-    this.auth0 = new auth0.WebAuth(Config.AuthEnv);
+    this.auth0 = new auth0.WebAuth(config.AuthEnv);
   }
 
   login() {
@@ -38,6 +38,8 @@ class Auth {
     const idToken = authResult.idToken;
     const expiresAt = authResult.idTokenPayload.exp * 1000;
   }
+
+  performLogout() {}
 }
 
 const AuthInstance = new Auth();
