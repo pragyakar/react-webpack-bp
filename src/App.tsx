@@ -5,7 +5,7 @@ import Router from './Router';
 const App = () => {
   return (
     <>
-      <p>OTG Web</p>
+      <p>React Webpack BP</p>
       <Login />
       <Router />
     </>
