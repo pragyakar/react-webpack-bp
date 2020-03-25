@@ -16,3 +16,6 @@ yarn-error.log
 
 # other files
 .DS_Store
+
+# coverage
+coverage
