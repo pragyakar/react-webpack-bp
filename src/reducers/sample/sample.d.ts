@@ -2,7 +2,7 @@ import { ActionType } from '../action';
 import { FILL_SAMPLE_ACTION } from 'src/constants/actions';
 import { IFillSampleActionPayload } from 'src/actionCreators/sample/sample';
 
-export interface ISampleState {
+export interface ISampleReduxState {
   initial: string;
   data: {}[];
 }

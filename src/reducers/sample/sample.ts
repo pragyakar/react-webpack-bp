@@ -1,7 +1,7 @@
-import { ISampleState, SampleActionType } from './sample.d';
+import { ISampleReduxState, SampleActionType } from './sample.d';
 import { FILL_SAMPLE_ACTION } from 'src/constants/actions';
 
-const initialSampleState: ISampleState = {
+const initialSampleState: ISampleReduxState = {
   initial: 'react-webpack-bp',
   data: []
 };
@@ -13,6 +13,9 @@ export default (state = initialSampleState, action: SampleActionType) => {
         ...state,
         data: action.payload.data
       };
+    }
+    default: {
+      return state;
     }
   }
 };
