@@ -14,8 +14,13 @@ export function fetchSampleAction(
   };
 }
 
+export interface ISample {
+  id: string;
+  value: string;
+}
+
 export interface IFillSampleActionPayload {
-  data: {}[];
+  data: ISample[];
 }
 
 export function fillSampleAction(payload: IFillSampleActionPayload): SampleActions.fillSampleAction {

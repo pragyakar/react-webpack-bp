@@ -17,11 +17,11 @@ describe('sample reducer', () => {
           initial: 'react-webpack-bp',
           data: []
         },
-        fillSampleAction({ data: [{ message: 'success' }] })
+        fillSampleAction({ data: [{ id: 'test', value: 'success' }] })
       )
     ).toEqual({
       initial: 'react-webpack-bp',
-      data: [{ message: 'success' }]
+      data: [{ id: 'test', value: 'success' }]
     });
   });
 });

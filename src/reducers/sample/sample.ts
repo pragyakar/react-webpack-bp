@@ -11,7 +11,7 @@ export default (state = initialSampleState, action: SampleActionType) => {
     case FILL_SAMPLE_ACTION: {
       return {
         ...state,
-        data: action.payload.data
+        data: [...state.data, ...action.payload.data]
       };
     }
     default: {
