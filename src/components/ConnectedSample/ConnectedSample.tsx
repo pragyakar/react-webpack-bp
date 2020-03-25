@@ -9,7 +9,6 @@ import List from './List';
 const ConnectedSample: React.FC<{ initial: string }> = ({ initial }) => {
   const dispatch = useDispatch();
   const handleAddNewSample = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log('handleAddNewSample', event.timeStamp);
     dispatch(
       fillSampleAction({
         data: [
