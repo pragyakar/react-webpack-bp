@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { config } from 'src/config';
-import parseErrorMessage from './error';
+import parseErrorMessage from 'src/utils/error';
 import storage from 'src/utils/storage';
 
 const axiosInstance = axios.create({

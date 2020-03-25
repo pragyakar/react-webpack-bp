@@ -11,7 +11,8 @@
     "create:production": "NODE_ENV=production PORT=9001 webpack -p",
     "build:production": "run-s clean create:production",
     "format": "prettier --write \"src/**/*.{ts, tsx, js}\"",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -25,6 +26,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^25.1.4",
     "@types/react": "^16.9.21",
     "@types/react-dom": "^16.9.5",
     "@types/react-redux": "^7.1.7",
@@ -37,6 +39,7 @@
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^4.2.3",
+    "jest": "^25.1.0",
     "lint-staged": "^10.0.7",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
@@ -45,6 +48,7 @@
     "sass-loader": "^8.0.2",
     "serve": "^11.3.0",
     "source-map-loader": "^0.2.4",
+    "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",
     "tslint": "^6.0.0",
     "tslint-loader": "^3.5.4",

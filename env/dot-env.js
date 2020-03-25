@@ -12,7 +12,7 @@ function getEnvConfig(environment) {
       REDIRECT_URI: process.env.REDIRECT_URI,
       RESPONSE_TYPE: process.env.RESPONSE_TYPE,
       SCOPE: process.env.SCOPE,
-      BASE_URL: process.env.BABEL_ENV,
+      BASE_URL: process.env.BASE_URL,
       TIMEOUT: process.env.TIMEOUT
     };
   } else {
