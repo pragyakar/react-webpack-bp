@@ -13,3 +13,14 @@ export function fetchSampleAction(
     reject
   };
 }
+
+export interface IFillSampleActionPayload {
+  data: {}[];
+}
+
+export function fillSampleAction(payload: IFillSampleActionPayload): SampleActions.fillSampleAction {
+  return {
+    type: actions.FILL_SAMPLE_ACTION,
+    payload
+  };
+}

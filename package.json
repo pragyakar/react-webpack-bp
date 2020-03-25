@@ -12,7 +12,8 @@
     "build:production": "run-s clean create:production",
     "format": "prettier --write \"src/**/*.{ts, tsx, js}\"",
     "clean": "rimraf dist",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "husky": {
     "hooks": {
