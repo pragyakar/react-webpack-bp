@@ -1,17 +1,15 @@
 import * as React from 'react';
-import SampleComponent from '../SampleComponent/SampleComponent';
-import { connect } from 'react-redux';
-import { ReduxState } from 'src/reducers/rootReducer';
+import SampleComponent from 'src/components/SampleComponent/SampleComponent';
+import ConnectedSample from 'src/components/ConnectedSample/ConnectedSample';
 
-const Dashboard: React.FC<{ text: string }> = ({ text }) => {
+const Dashboard: React.FC<{}> = () => {
   return (
     <>
-      <h3>Dashboard component</h3>
-      <SampleComponent text={text} handleClick={() => alert(text)} />
+      <h2>Dashboard component</h2>
+      <SampleComponent text={'Sample Component'} handleClick={() => alert('Sample Component')} />
+      <ConnectedSample />
     </>
   );
 };
 
-const mapStateToProps = ({ sample }: ReduxState) => ({ text: sample.initial });
-
-export default connect(mapStateToProps)(Dashboard);
+export default Dashboard;
