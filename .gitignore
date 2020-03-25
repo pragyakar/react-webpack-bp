@@ -4,6 +4,9 @@ dist/
 # node_modules
 node_modules/
 
+# testcoverage
+coverage/
+
 # yarn
 yarn-error.log
 
