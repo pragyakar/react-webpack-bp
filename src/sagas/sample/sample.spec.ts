@@ -10,8 +10,9 @@ describe('test sample saga', () => {
     const expectedResponse = {
       message: 'success'
     };
+    const resolve = jest.fn();
     const fetchSampleAPI = jest.spyOn(sampleApis, 'fetchSampleAPI').mockResolvedValueOnce(expectedResponse);
-    const callableFetchSampleAction = sampleActions.fetchSampleAction('test');
+    const callableFetchSampleAction = sampleActions.fetchSampleAction('test', resolve);
 
     await runSaga(
       {
@@ -23,6 +24,32 @@ describe('test sample saga', () => {
     ).toPromise();
 
     expect(fetchSampleAPI).toBeCalledTimes(1);
+    expect(resolve).toBeCalledTimes(1);
+    expect(resolve).toBeCalledWith(expectedResponse);
+  });
+
+  it('fetch sample effect should handle error', async () => {
+    const dispatched = [];
+    const expectedErrorResponse = {
+      message: 'something went wrong'
+    };
+    const fetchSampleAPI = jest.spyOn(sampleApis, 'fetchSampleAPI').mockRejectedValueOnce(expectedErrorResponse);
+    const resolve = jest.fn();
+    const reject = jest.fn();
+    const callableFetchSampleAction = sampleActions.fetchSampleAction('test', resolve, reject);
+
+    await runSaga(
+      {
+        dispatch: action => dispatched.push(action),
+        getState: jest.fn()
+      },
+      sampleEffects.fetchSampleEffect,
+      callableFetchSampleAction
+    ).toPromise();
+
+    expect(fetchSampleAPI).toBeCalledTimes(1);
+    expect(reject).toBeCalledTimes(1);
+    expect(reject).toBeCalledWith(expectedErrorResponse);
   });
 
   it('fetchSample api should work', async () => {
