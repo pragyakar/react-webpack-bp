@@ -3,9 +3,9 @@ import { ISample } from 'src/actionCreators/sample/sample';
 import { ReduxState } from 'src/reducers/rootReducer';
 import { connect } from 'react-redux';
 
-const List: React.FC<{ data: ISample[] }> = ({ data }) => {
+export const List: React.FC<{ data: ISample[] }> = ({ data }) => {
   return (
-    <ul>
+    <ul className="sample-list">
       {data.map(sample => (
         <li key={sample.id}>{sample.value}</li>
       ))}
