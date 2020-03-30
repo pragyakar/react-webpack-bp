@@ -7,4 +7,5 @@ const initEnvironmentVariables = () => {
 (() => {
   const envConfig = initEnvironmentVariables();
   global.envConfig = envConfig;
+  global.environment = process.env.NODE_ENV;
 })();

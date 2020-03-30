@@ -9,7 +9,8 @@ describe('test sample saga', () => {
   it('fetch sample effect should works', async () => {
     const dispatched: SampleActionType[] = [];
     const expectedResponse = {
-      message: 'success'
+      id: 'test',
+      value: 'success'
     };
     const resolve = jest.fn();
     const fetchSampleAPI = jest.spyOn(sampleApis, 'fetchSampleAPI').mockResolvedValueOnce(expectedResponse);
