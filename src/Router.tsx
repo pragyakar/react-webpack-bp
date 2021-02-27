@@ -1,17 +1,19 @@
 import * as React from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import { ConnectedRouter } from 'connected-react-router';
 
-import * as routes from './constants/routes';
-import Callback from './components/Callback';
-import Dashboard from './components/Dashboard';
+import history from 'src/utils/history';
+import Callback from 'src/components/Callback';
+import Dashboard from 'src/components/Dashboard';
+import * as routes from 'src/constants/routes';
 
 const Router = () => (
-  <BrowserRouter>
+  <ConnectedRouter history={history}>
     <Switch>
       <Route path={routes.DASHBOARD} component={Dashboard} />
       <Route path={routes.CALLBACK} component={Callback} />
     </Switch>
-  </BrowserRouter>
+  </ConnectedRouter>
 );
 
 export default Router;

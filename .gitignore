@@ -4,6 +4,9 @@ dist/
 # node_modules
 node_modules/
 
+# testcoverage
+coverage/
+
 # yarn
 yarn-error.log
 
@@ -16,3 +19,6 @@ yarn-error.log
 
 # other files
 .DS_Store
+
+# coverage
+coverage
